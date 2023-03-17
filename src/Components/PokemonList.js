@@ -36,6 +36,10 @@ const PokemonList = () => {
     setSearchTerm(event.target.value);
   };
 
+  const handleClearSearch = () => {
+    setSearchTerm("");
+  };
+
   const filteredPokemons = pokemons.filter((pokemon) =>
     pokemon.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
@@ -50,7 +54,10 @@ const PokemonList = () => {
       {showCard ? (
         <PokemonCard
           pokemonData={selectedPokemonData}
-          onClose={() => setShowCard(false)}
+          onClose={() => {
+            setShowCard(false);
+            handleClearSearch();
+          }}
         />
       ) : (
         <div>
@@ -62,6 +69,11 @@ const PokemonList = () => {
               placeholder="Buscar pokémon..."
               className="form-control"
             />
+            {searchTerm && (
+              <button className="btn btn-outline-secondary ms-2" onClick={handleClearSearch}>
+                Limpar
+              </button>
+            )}
           </div>
 
           <div className="table-responsive">
@@ -106,6 +118,7 @@ const PokemonList = () => {
     </div>
   );
 };
+
 
 const PokemonCard = ({ pokemonData, onClose }) => {
   return (
