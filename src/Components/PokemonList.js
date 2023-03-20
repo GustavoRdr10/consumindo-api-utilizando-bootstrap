@@ -67,10 +67,10 @@ const PokemonList = () => {
               value={searchTerm}
               onChange={handleSearchChange}
               placeholder="Buscar pokémon..."
-              className="form-control"
+              className="form-control ms-2"
             />
             {searchTerm && (
-              <button className="btn btn-outline-secondary ms-2" onClick={handleClearSearch}>
+              <button className="btn btn-outline-secondary ms-2 btn-primary text-white" onClick={handleClearSearch}>
                 Limpar
               </button>
             )}
