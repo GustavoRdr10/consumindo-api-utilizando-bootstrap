@@ -1,11 +1,11 @@
-
+s
 🚀 Tecnologias
 
 ReactJS
 Bootstrap
 
 💻 Projeto
-Esse projeto foi desenvolvido para um teste para vaga de emprego:
+Esse projeto foi desenvolvido para meus estudos.
 
 Como utilizar?
 
